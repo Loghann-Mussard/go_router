@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -16,10 +17,10 @@ class _CartPageState extends State<CartPage> {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          children: [const Text('panier')],
-        ),
-      ),
+          child: ElevatedButton(
+        onPressed: () => context.go('/'),
+        child: const Text('go to home page'),
+      )),
     );
   }
 }

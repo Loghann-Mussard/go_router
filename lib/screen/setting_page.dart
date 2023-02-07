@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SettingPage extends StatefulWidget {
-  const SettingPage({super.key});
+  final String name;
+  const SettingPage({super.key, required this.name});
 
   @override
   State<SettingPage> createState() => _SettingPageState();
@@ -12,12 +14,14 @@ class _SettingPageState extends State<SettingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('setting'),
+        automaticallyImplyLeading: true,
+        title: const Text('name'),
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          children: [const Text('setting')],
+        child: ElevatedButton(
+          onPressed: () => context.go('/'),
+          child: const Text('go to home'),
         ),
       ),
     );

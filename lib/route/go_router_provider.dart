@@ -47,6 +47,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                   pageBuilder: (context, state) => NoTransitionPage(
                           child: SettingPage(
                         key: state.pageKey,
+                        name: 'name',
                       ))),
             ])
       ],
